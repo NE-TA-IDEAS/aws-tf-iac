@@ -6,3 +6,4 @@ try {
       checkout scm
     }
   }
+}

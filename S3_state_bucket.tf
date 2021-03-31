@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "b" {
  }
 
   tags = {
-    Name        = "poc_tfstate_files"
+    Name        = "tf_poc_tfstate_files"
     Environment = "poc"
   }
 }

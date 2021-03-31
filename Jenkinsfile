@@ -5,4 +5,4 @@ try {
       cleanWs()
       checkout scm
     }
-  )
+  }

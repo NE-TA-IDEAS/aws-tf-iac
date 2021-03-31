@@ -5,7 +5,7 @@ provider "aws" {
 
 # S3 bucket to store tfstate files
 resource "aws_s3_bucket" "b" {
-  bucket = "tfstate-files"
+  bucket = "poc-tfstate-files"
   acl    = "private"
 
   server_side_encryption_configuration {
@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "b" {
  }
 
   tags = {
-    Name        = "tfpoc_backend_tfstate_files"
+    Name        = "poc-tfstate-files"
     Environment = "poc"
   }
 }

@@ -3,7 +3,7 @@
 # create the VPC
 terraform {
   backend "s3" {
-    bucket = "poc-tfstate-iac"
+    bucket = "poc-tfstate-files"
     key    = "poc_tfstate_files/vpc_tf"
     region = "us-east-2"
   }

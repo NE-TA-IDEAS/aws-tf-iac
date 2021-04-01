@@ -3,6 +3,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "poc-tfstate-iac"
+    key    = "poc_tfstate_files/ec2_tf"
+    region = "us-east-2"
+  }
+}
+
 # S3 bucket to store tfstate files
 resource "aws_s3_bucket" "b" {
   bucket = "poc-tfstate-files"

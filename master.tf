@@ -1,6 +1,3 @@
-#tfstate file backend
-
-}
 module "backend-S3" {
     source                  = "./modules/s3/backend-s3"
 }

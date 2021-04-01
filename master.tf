@@ -1,4 +1,8 @@
 # Use AWS Terraform provider
+provider "aws" {
+    region = "us-east-2"
+}
+
 module "backend-S3" {
     source                  = "./modules/s3/backend-s3"
 }

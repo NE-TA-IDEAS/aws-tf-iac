@@ -6,7 +6,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "poc-tfstate-iac"
-    key    = "poc_tfstate_files/ec2_tf"
+    key    = "poc_tfstate_files/s3_tf"
     region = "us-east-2"
   }
 }

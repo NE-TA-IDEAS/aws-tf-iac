@@ -4,8 +4,8 @@ module "backend-S3" {
 }
 #VPC module
     module "poc-vpc" {
- /*   source                  = "./modules/VPC/POC-VPC"
-    availabilityZone        = var.availabilityZone
+    source                  = "./modules/VPC/POC-VPC"
+ /*      availabilityZone        = var.availabilityZone
     instanceTenancy         = var.instanceTenancy
     dnsSupport              = var.dnsSupport
     dnsHostNames            = var.dnsHostNames

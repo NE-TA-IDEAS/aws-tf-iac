@@ -1,13 +1,6 @@
 # vpc.tf 
 # Create VPC/Subnet/Security Group/Network ACL
 # create the VPC
-terraform {
-  backend "s3" {
-    bucket = "poc-tfstate-files"
-    key    = "poc_tfstate_files/vpc"
-    region = "us-east-2"
-  }
-}
 
 resource "aws_vpc" "POC_VPC" {
   cidr_block           = var.vpcCIDRblock
@@ -145,5 +138,14 @@ resource "aws_route" "POC_VPC_internet_access" {
 resource "aws_route_table_association" "POC_VPC_association" {
   subnet_id      = aws_subnet.POC_VPC_Subnet.id
   route_table_id = aws_route_table.POC_VPC_route_table.id
-} # end resource
+} 
+
+terraform {
+  backend "s3" {
+    bucket = "poc-tfstate-files"
+    key    = "poc_tfstate_files/vpc"
+    region = "us-east-2"
+  }
+}
+# end resource
 # end vpc.tf

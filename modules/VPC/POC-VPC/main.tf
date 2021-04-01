@@ -4,7 +4,7 @@
 terraform {
   backend "s3" {
     bucket = "poc-tfstate-files"
-    key    = "poc_tfstate_files/vpc_tf"
+    key    = "poc_tfstate_files/vpc"
     region = "us-east-2"
   }
 }

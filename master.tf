@@ -8,8 +8,9 @@ module "backend-S3" {
     module "poc-vpc" {
     source                  = "./modules/VPC/POC-VPC"
 }
-*/
+
 #Ec2 module        
     module "ec2" {
     source                  = "./modules/EC2/poc-ec2"
 }
+*/

@@ -4,7 +4,7 @@ module "backend-S3" {
 }
 #VPC module
     module "poc-vpc" {
-    source                  = "./modules/VPC/POC-VPC"
+    source                  = "./modules/VPC/POC-VPC"   
  /*      availabilityZone        = var.availabilityZone
     instanceTenancy         = var.instanceTenancy
     dnsSupport              = var.dnsSupport
@@ -16,4 +16,8 @@ module "backend-S3" {
     egressCIDRblock         = var.egressCIDRblock
     mapPublicIP             = var.mapPublicIP
 */
+}
+#Ec2 module        
+    module "ec2" {
+    source                  = "./modules/EC2/poc-ec2"
 }

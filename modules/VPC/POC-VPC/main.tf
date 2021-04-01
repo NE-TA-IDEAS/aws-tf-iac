@@ -1,6 +1,14 @@
 # vpc.tf 
 # Create VPC/Subnet/Security Group/Network ACL
 # create the VPC
+terraform {
+  backend "s3" {
+    bucket = "poc-tfstate-iac"
+    key    = "poc_tfstate_files/ec2_tf"
+    region = "us-east-2"
+  }
+}
+
 resource "aws_vpc" "POC_VPC" {
   cidr_block           = var.vpcCIDRblock
   instance_tenancy     = var.instanceTenancy 

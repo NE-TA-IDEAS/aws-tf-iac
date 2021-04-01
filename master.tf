@@ -5,7 +5,7 @@ module "backend-S3" {
 #VPC module
     module "poc-vpc" {
     source                  = "./modules/VPC/POC-VPC"
-    region                  = us-east-2
+    region                  = "us-east-2"
  /*   availabilityZone        = var.availabilityZone
     instanceTenancy         = var.instanceTenancy
     dnsSupport              = var.dnsSupport

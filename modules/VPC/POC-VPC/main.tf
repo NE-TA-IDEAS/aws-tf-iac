@@ -1,4 +1,4 @@
- vpc.tf 
+# vpc.tf 
 # Create VPC/Subnet/Security Group/Network ACL
 # create the VPC
 resource "aws_vpc" "POC_VPC" {

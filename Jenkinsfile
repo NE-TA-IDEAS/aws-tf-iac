@@ -21,7 +21,7 @@ try {
     }
   }
 
-  if (env.BRANCH_NAME == 'build') {
+  if (env.BRANCH_NAME == 'terraform-iac') {
 
     // Run terraform apply
     stage('apply') {

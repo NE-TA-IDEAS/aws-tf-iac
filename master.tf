@@ -11,6 +11,6 @@ module "backend-S3" {
 */
 #Ec2 module        
     module "ec2" {
-    source                  = "git::git@github.com:NE-TA-IDEAS/tf-modules.git//tf-modules/modules/EC2/poc-ec2"
+    source                  = "./modules/EC2/poc-ec2"
 }
 

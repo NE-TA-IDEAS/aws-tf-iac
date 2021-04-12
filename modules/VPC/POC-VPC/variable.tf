@@ -16,15 +16,21 @@ variable "dnsHostNames" {
 variable "vpcCIDRblock" {
     default = "10.0.0.0/16"
 }
-variable "subnetCIDRblock" {
+variable "publicCIDRblock" {
     default = "10.0.1.0/24"
+}
+variable "appCIDRblock" {
+    default = "10.0.2.0/24"
+}
+variable "dataCIDRblock" {
+    default = "10.0.3.0/24"
 }
 variable "destinationCIDRblock" {
     default = "0.0.0.0/0"
 }
 variable "ingressCIDRblock" {
     type = list
-    default = [ "0.0.0.0/0" ]
+    default = [ "72.200.161.135/32" ]
 }
 variable "egressCIDRblock" {
     type = list

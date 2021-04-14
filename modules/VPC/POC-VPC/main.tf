@@ -12,30 +12,61 @@ tags = {
 }
 } # end resource
 # create the Subnet
-resource "aws_subnet" "public_Subnet" {
+resource "aws_subnet" "public-1" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.publicCIDRblock
   map_public_ip_on_launch = var.mapPublicIP
-  availability_zone       = var.availabilityZone
+  availability_zone       = var.availabilityZonea
 tags = {
    Name = "POC public Subnet"
 }
 } # end resource
-
 # create the Subnet
-resource "aws_subnet" "app_Subnet" {
+resource "aws_subnet" "public-2" {
+  vpc_id                  = aws_vpc.POC_VPC.id
+  cidr_block              = var.publicCIDRblock
+  map_public_ip_on_launch = var.mapPublicIP
+  availability_zone       = var.availabilityZoneb
+tags = {
+   Name = "POC public Subnet"
+}
+} # end resource
+# create the Subnet
+resource "aws_subnet" "app-1" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.appCIDRblock
-  availability_zone       = var.availabilityZone
+  availability_zone       = var.availabilityZonea
 tags = {
    Name = "POC app Subnet"
 }
 } # end resource
 # create the Subnet
+resource "aws_subnet" "app-2" {
+  vpc_id                  = aws_vpc.POC_VPC.id
+  cidr_block              = var.appCIDRblock
+  availability_zone       = var.availabilityZoneb
+tags = {
+   Name = "POC app Subnet"
+}
+} # end resource
+
+
+# create the Subnet
 resource "aws_subnet" "Data_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.dataCIDRblock
-  availability_zone       = var.availabilityZone
+  availability_zone       = var.availabilityZonea
+tags = {
+   Name = "POC DATA Subnet"
+}
+} # end resource
+
+
+# create the Subnet
+resource "aws_subnet" "Data-2" {
+  vpc_id                  = aws_vpc.POC_VPC.id
+  cidr_block              = var.dataCIDRblock
+  availability_zone       = var.availabilityZoneb
 tags = {
    Name = "POC DATA Subnet"
 }

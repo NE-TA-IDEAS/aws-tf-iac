@@ -28,7 +28,7 @@ tags = {
 resource "aws_subnet" "app_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.appCIDRblock
-  availability_zone       = var.availabilityZone
+  availability_zone       = var.availabilityZonea
   availability_zone       = var.availabilityZoneb
   availability_zone       = var.availabilityZonec
 tags = {
@@ -39,7 +39,7 @@ tags = {
 resource "aws_subnet" "Data_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.dataCIDRblock
-  availability_zone       = var.availabilityZone
+  availability_zone       = var.availabilityZonea
   availability_zone       = var.availabilityZoneb
   availability_zone       = var.availabilityZonec
 tags = {

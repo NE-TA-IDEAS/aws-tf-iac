@@ -14,7 +14,7 @@ tags = {
 # create the Subnet
 resource "aws_subnet" "public-1" {
   vpc_id                  = aws_vpc.POC_VPC.id
-  cidr_block              = var.publicCIDRblock
+  cidr_block              = var.publicCIDRblock1
   map_public_ip_on_launch = var.mapPublicIP
   availability_zone       = var.availabilityZonea
 tags = {
@@ -24,7 +24,7 @@ tags = {
 # create the Subnet
 resource "aws_subnet" "public-2" {
   vpc_id                  = aws_vpc.POC_VPC.id
-  cidr_block              = var.publicCIDRblock
+  cidr_block              = var.publicCIDRblock2
   map_public_ip_on_launch = var.mapPublicIP
   availability_zone       = var.availabilityZoneb
 tags = {
@@ -34,19 +34,19 @@ tags = {
 # create the Subnet
 resource "aws_subnet" "app-1" {
   vpc_id                  = aws_vpc.POC_VPC.id
-  cidr_block              = var.appCIDRblock
+  cidr_block              = var.appCIDRblock1
   availability_zone       = var.availabilityZonea
 tags = {
-   Name = "POC app Subnet"
+   Name = "POC app Subnet 1"
 }
 } # end resource
 # create the Subnet
 resource "aws_subnet" "app-2" {
   vpc_id                  = aws_vpc.POC_VPC.id
-  cidr_block              = var.appCIDRblock
+  cidr_block              = var.appCIDRblock2
   availability_zone       = var.availabilityZoneb
 tags = {
-   Name = "POC app Subnet"
+   Name = "POC app Subnet 2"
 }
 } # end resource
 
@@ -54,10 +54,10 @@ tags = {
 # create the Subnet
 resource "aws_subnet" "Data_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
-  cidr_block              = var.dataCIDRblock
+  cidr_block              = var.dataCIDRblock1
   availability_zone       = var.availabilityZonea
 tags = {
-   Name = "POC DATA Subnet"
+   Name = "POC DATA Subnet 1"
 }
 } # end resource
 
@@ -65,10 +65,10 @@ tags = {
 # create the Subnet
 resource "aws_subnet" "Data-2" {
   vpc_id                  = aws_vpc.POC_VPC.id
-  cidr_block              = var.dataCIDRblock
+  cidr_block              = var.dataCIDRblock2
   availability_zone       = var.availabilityZoneb
 tags = {
-   Name = "POC DATA Subnet"
+   Name = "POC DATA Subnet 2"
 }
 } # end resource
 

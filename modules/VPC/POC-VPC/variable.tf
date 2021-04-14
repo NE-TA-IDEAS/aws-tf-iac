@@ -1,15 +1,8 @@
 variable "region" {
      default = "us-east-2"
 }
-variable "availabilityZonea" {
+variable "availabilityZone" {
      default = "us-east-2a"
-}
-
-variable "availabilityZoneb" {
-     default = "us-east-2b"
-}
-variable "availabilityZonec" {
-     default = "us-east-2c"
 }
 
 variable "instanceTenancy" {

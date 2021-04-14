@@ -36,6 +36,7 @@ resource "aws_subnet" "Data_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.dataCIDRblock
 #  availability_zone       = var.availabilityZone
+  availability_zones       = true
 tags = {
    Name = "POC DATA Subnet"
 }

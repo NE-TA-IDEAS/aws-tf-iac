@@ -16,7 +16,7 @@ resource "aws_subnet" "public_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.publicCIDRblock
   map_public_ip_on_launch = var.mapPublicIP
-  all_availability_zones       = true
+  availability_zone       = var.availabilityZone
 tags = {
    Name = "POC public Subnet"
 }
@@ -26,7 +26,7 @@ tags = {
 resource "aws_subnet" "app_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.appCIDRblock
-  all_availability_zones       = true
+  availability_zone       = var.availabilityZone
 tags = {
    Name = "POC app Subnet"
 }
@@ -35,8 +35,7 @@ tags = {
 resource "aws_subnet" "Data_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.dataCIDRblock
-#  availability_zone       = var.availabilityZone
-  all_availability_zones       = true
+  availability_zone       = var.availabilityZone
 tags = {
    Name = "POC DATA Subnet"
 }

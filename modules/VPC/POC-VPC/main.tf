@@ -109,7 +109,6 @@ tags = {
 resource "aws_network_acl" "POC_VPC_Security_ACL" {
   vpc_id = aws_vpc.POC_VPC.id
   subnet_ids = [ aws_subnet.public-1.id ]
-  subnet_ids = [ aws_subnet.public-2.id ]
 # allow ingress port 22
   ingress {
     protocol   = "tcp"
@@ -196,7 +195,6 @@ resource "aws_route" "POC_VPC_internet_access" {
 # Associate the Route Table with the Subnet
 resource "aws_route_table_association" "POC_VPC_association" {
   subnet_id      = aws_subnet.public-1.id
-  subnet_id      = aws_subnet.public-2.id
   route_table_id = aws_route_table.POC_VPC_route_table.id
 }
 

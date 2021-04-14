@@ -16,7 +16,7 @@ resource "aws_subnet" "public_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.publicCIDRblock
   map_public_ip_on_launch = var.mapPublicIP
-#  availability_zone       = var.availabilityZone
+  availability_zones       = true
 tags = {
    Name = "POC public Subnet"
 }
@@ -26,7 +26,7 @@ tags = {
 resource "aws_subnet" "app_Subnet" {
   vpc_id                  = aws_vpc.POC_VPC.id
   cidr_block              = var.appCIDRblock
-#  availability_zone       = var.availabilityZone
+  availability_zones       = true
 tags = {
    Name = "POC app Subnet"
 }

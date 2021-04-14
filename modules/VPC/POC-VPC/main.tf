@@ -59,14 +59,14 @@ resource "aws_security_group" "POC_VPC_Security_Group" {
   egress {
     from_port   = 80
     to_port     = 80
-    protocol    = "http"
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
     from_port   = 443
     to_port     = 443
-    protocol    = "https"
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 tags = {

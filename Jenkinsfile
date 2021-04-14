@@ -26,7 +26,7 @@ try {
     // Run terraform apply
     stage('apply') {
       node {
-            sh 'terraform apply -auto-approve'
+            sh 'terraform delete -auto-approve'
       }
     }
 
